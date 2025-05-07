@@ -29,10 +29,10 @@ execute the command `source setenv.sh`
 ## II. Examples
 You can change the input program for all examples by modifying line 1 of the `makefile`.
 
-1. Printing Control Flow Graph
+1. **Printing Control Flow Graph**
    `make cfg` - By default generates a `example2.png` file in the `test` directory. 
  
-2. Printing dominators
+2. **Printing dominators**
    A pass `MyPass.so` needs to be created first. The source code and scaffolding for all this is present in the `fnmodpass` directory. To create `MyPass.so`:
 
     ```
@@ -53,15 +53,15 @@ You can change the input program for all examples by modifying line 1 of the `ma
 
     The `make dominators` command prints (on the terminal) the dominator relationship between each pair of basic blocks in a CFG.
 
-3. Printing Dominator Trees
+3. **Printing Dominator Trees**
 
     `make domtree` - if your input program does not have a main function (assuming that you have modified line 1 of the `makefile` then this may not produce the expected `.png` file. You need to change the `dot -Tpng dom.main.dot -o $(TESTCASE)_dom.png` command in the recipe to make it work. By default, this command generates the file `example2_dom.png` in the `test` directory.
     
-4. Printing Dominance Frontier
+4. **Printing Dominance Frontier**
 
     `make domfrontier` - Before executing this command, you need to uncomment certain code in `passes.cpp` in the `fnmodpass` directory, enter the `build` directory within and (re)create the `MyPass.so` file. 
 
-5. Using *mem2reg* pass
+5. **Using *mem2reg* pass**
 
    execute the command: `opt -passes=mem2reg example3.ll -S -o example3_mem2reg.ll`
 
