@@ -1,0 +1,11 @@
+# clangd cache
+**/.cache/**
+# build files
+**/build*/**
+
+# generated files
+*.ll
+*.bc
+*.swp
+*.dot
+*.png
