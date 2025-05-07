@@ -30,9 +30,11 @@ execute the command `source setenv.sh`
 You can change the input program for all examples by modifying line 1 of the `makefile`.
 
 1. **Printing Control Flow Graph**
-   `make cfg` - By default generates a `example2.png` file in the `test` directory. 
+ 
+  `make cfg` - This command by default, generates a `example2.png` file in the `test` directory. 
  
 2. **Printing dominators**
+
    A pass `MyPass.so` needs to be created first. The source code and scaffolding for all this is present in the `fnmodpass` directory. To create `MyPass.so`:
 
     ```
