@@ -1,6 +1,10 @@
 # (Liveness Analysis, Reaching Definitions) with LLVM
 
-This repository contains examples that use LLVM toolchain and framework to do liveness and reaching definitions analysis.
+This directory contains examples that use LLVM toolchain and framework to do liveness and reaching definitions analysis.
+
+To know about how the worklist algorithm results in smaller (compared to round-robin) number of nodes processed in a cfg, read `dfa-theory.pdf` (slides 106 - 122. slides 116 - 118 summarize the results.  Thanks to [Prof. Uday Khedker](https://www.cse.iitb.ac.in/~uday/) for sharing the slides.)
+
+The first known result on the complexity of iterative, round-robin algorithm for bi-directional dataflow analysis problems is [here](https://www.cse.iitb.ac.in/~uday/popl93.ps), [pdf version](https://dl.acm.org/doi/pdf/10.1145/158511.158696).  
 
 ## I. Installing `llvm`
 
