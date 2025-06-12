@@ -1,6 +1,6 @@
 # (Clang AST)
 
-This repository contains slides and code examples to traverse AST and more.
+This directory contains slides and code examples to traverse AST and more.
 
 ## I. Installing `llvm`
 

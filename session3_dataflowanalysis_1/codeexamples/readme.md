@@ -1,6 +1,6 @@
 # (Control Flow Graphs, Dominators, Dominator Trees, Dominance Frontier, SSA form) with LLVM
 
-This repository contains examples that use LLVM toolchain and framework to print control flow graphs for a program, dominator relationship between basic blocks in a program, dominator tree, dominance frontier of a basic block, and how the optimized SSA form is generated.
+This directory contains examples that use LLVM toolchain and framework to print control flow graphs for a program, dominator relationship between basic blocks in a program, dominator tree, dominance frontier of a basic block, and how the optimized SSA form is generated.
 
 ## I. Installing `llvm`
 

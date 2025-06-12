@@ -1,3 +1,3 @@
 # (Alias Analysis)
 
-This repository contains slides on Alias Analysis and in-class exercises.
+This directory contains slides on Alias Analysis and in-class exercises.
