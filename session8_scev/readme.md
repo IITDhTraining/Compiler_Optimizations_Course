@@ -1,0 +1,42 @@
+# (Optimizing Transformations)
+
+This directory contains slides and code demos on Scalar Evolution and its implementation, SCEV, in LLVM.  
+
+## I. Installing `llvm`
+
+```
+git clone https://github.com/llvm/llvm-project.git
+git checkout tags/llvmorg-20.1.0
+```
+
+Building with cmake:
+```
+mkdir llvm-project/build
+cd llvm-project
+cmake -S llvm -B build -G Ninja \
+   -DLLVM_ENABLE_PROJECTS=llvm;clang;clang-tools-extra;lldb;lld \
+   -DLLVM_BUILD_EXAMPLES=ON \
+   -DLLVM_TARGETS_TO_BUILD="Native;NVPTX;AMDGPU" \
+   -DCMAKE_BUILD_TYPE=Debug \
+   -DLLVM_ENABLE_ASSERTIONS=ON \
+   -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DLLVM_ENABLE_LLD=ON
+ninja -C -build . 
+```
+If you have the `llvm-project` created other than in the home drive, you need to modify `setenv.sh` to tell the `PATH` variable to find the newly built compiler in the specific location. 
+
+execute the command `source setenv.sh`
+
+
+## II. Examples (in codeexample directory)
+- for each `.c` file provided, execute the following commands (shown below with `scevex1.c`). 
+```
+clang -emit-llvm scevex1.c -S -O1
+opt -passes="print<scalar-evolution>" -disable-output scevex1.ll
+```
+
+`scevex1.c` - shows an example for strength reduction
+`scevex2.c` - shows an example for induction variable simplification
+`scevex3.c` - shows an example for combining recurrence relations and producing a recurrence relation for a bigger expression
+`scevex4.c` and `scevex5.c` - shows an example for folding and rewriting 
+
+
