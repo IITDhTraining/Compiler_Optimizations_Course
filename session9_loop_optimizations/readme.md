@@ -1,6 +1,6 @@
 # (Optimizing Transformations)
 
-This directory contains slides and code demos on loop optimizations. Currently only code example related to simplification of induction variable is added. Examples on writing optimization passes and other optimizations will be added soon.  
+This directory contains slides and code demos on loop optimizations. Currently only code example related to simplification of induction variable is added. Examples on writing optimization passes and other optimizations are added in session10.  
 
 ## I. Installing `llvm`
 
